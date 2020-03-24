@@ -1,0 +1,36 @@
+.logo img {
+    position: relative;
+    left: 40px;
+    top: 7px;
+}
+
+.Layout1 {
+    display: grid;
+    grid-template-columns: 18% repeat(1, 1fr);
+    background-color: white;
+
+}
+#mySlider {
+    height: 100%;
+}
+.ant-menu.ant-menu-light.ant-menu-root.ant-menu-vertical {
+    background: #000022;
+    width: 100.5%;
+    color: white;
+    text-align: start;
+    .ant-menu-item {
+        height: 56px;
+        padding-top: 7px;
+        .nav-text{
+            font-size: 18px;
+        }
+    }
+    .ant-menu-item.ant-menu-item-selected{
+        border-left: solid 5px white;
+        background-color: #CC66FF;
+        color: white;
+    }
+}
+.ant-menu.ant-menu-light.ant-menu-root.ant-menu-vertical :hover {
+    
+}

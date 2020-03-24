@@ -1,0 +1,36 @@
+directive @hasRoles(roles: [String]) on FIELD | FIELD_DEFINITION
+
+enum Roles {
+    ADMIN
+    MEMBER
+}
+
+type User {
+  _id: String!
+  username: String!
+  password: String!
+  activate: Boolean!
+  role: Roles!
+}
+
+input UserInput {
+  username: String!
+  password: String!
+}
+
+type Query {
+  hello: String!
+  user: [User!]
+  me: User!
+}
+type LoginResponse {
+	token: String!
+}
+
+type Mutation {
+  createUser(input: UserInput!): User
+  login(input: UserInput!): LoginResponse
+  deleteUser(username: String!): Boolean
+  changePassword(id: String!,oldpassword: String!, password: String!): Boolean
+  activateUser(id: String!): User
+}
